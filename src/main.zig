@@ -5,5 +5,5 @@ pub fn main() void {
 }
 
 test {
-    _ = @import("Tokenizer.zig");
+    _ = @import("Parser.zig");
 }
