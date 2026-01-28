@@ -20,6 +20,7 @@ fn parseRoot(parser: *Parser) !Ast {
     const rootBlock = try parser.parseBlock();
     return .{
         .arena = undefined,
+        .source = undefined,
         .root = rootBlock,
     };
 }
@@ -168,6 +169,7 @@ pub fn parse(allocator: std.mem.Allocator, source: [:0]const u8) !Ast {
     var parser: Parser = .init(arena.allocator(), tokens.allocatedSlice());
     var tree = try parser.parseRoot();
     tree.arena = arena;
+    tree.source = source;
     return tree;
 }
 

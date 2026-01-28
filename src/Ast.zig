@@ -4,6 +4,7 @@ const std = @import("std");
 const Tokenizer = @import("Tokenizer.zig");
 
 arena: std.heap.ArenaAllocator,
+source: [:0]const u8,
 root: []Statement,
 
 pub fn deinit(tree: *Ast) void {
