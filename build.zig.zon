@@ -1,0 +1,13 @@
+.{
+    .name = .luar,
+    .version = "0.0.0",
+    .fingerprint = 0xc06377eae175fc92,
+    .minimum_zig_version = "0.16.0-dev.2261+d6b3dd25a",
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "src",
+        "LICENSE",
+        "README.md",
+    },
+}
